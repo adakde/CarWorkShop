@@ -13,5 +13,9 @@ namespace Projekt.Domain.Entities
         public string? Description { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public CarWorkShopContanct ContactDetails { get; set; } = default!;
+
+        public string EncodedName { get; private set; } = default!;
+
+        public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
     }
 }
