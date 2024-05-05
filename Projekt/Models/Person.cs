@@ -2,7 +2,7 @@
 {
     public class Person
     {
-        public string? FistName { get; set; }
+        public string? FirstName { get; set; }
         public string? LastName { get; set; }
     }
 }
