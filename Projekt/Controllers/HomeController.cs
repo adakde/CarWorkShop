@@ -20,6 +20,19 @@ namespace Projekt.Controllers
             string[] Tags;
             return View();
         }
+        public IActionResult About()
+        {
+            var model = new About()
+            {
+                Title = "CarWorkShop Apllication",
+                Description = "Some description",
+                Tags = new List<String>() { "car", "app", "free" }
+            };
+
+
+            return View(model);
+
+        }
 
         public IActionResult Privacy()
         {
