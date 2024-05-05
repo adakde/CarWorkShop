@@ -23,7 +23,21 @@ namespace Projekt.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            var model = new List<Person>()
+            {
+                new Person()
+                {
+                    FirstName = "Jakub",
+                    LastName = "Kasprzak"
+                },
+                new Person()
+                {
+                    FirstName = "Kacper",
+                    LastName = "Kasprzak"
+                },
+            };
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
