@@ -11,6 +11,7 @@ namespace Projekt.Domain.Entities
         public int ID { get; set; }
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
+        public string? About {  get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public CarWorkShopContanct ContactDetails { get; set; } = default!;
 

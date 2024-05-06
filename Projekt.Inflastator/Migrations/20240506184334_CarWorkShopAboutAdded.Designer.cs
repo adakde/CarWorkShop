@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projekt.Infrastructure.CarWorkShopDB;
 
@@ -11,9 +12,11 @@ using Projekt.Infrastructure.CarWorkShopDB;
 namespace Projekt.Infrastructure.Migrations
 {
     [DbContext(typeof(CarWorkShopDBContext))]
-    partial class CarWorkShopDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240506184334_CarWorkShopAboutAdded")]
+    partial class CarWorkShopAboutAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
