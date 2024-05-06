@@ -24,7 +24,7 @@ namespace Projekt.Controllers
         {
             var model = new About()
             {
-                Title = "CarWorkShop Apllication",
+                Title = "CarWorkShop Application",
                 Description = "Some description",
                 Tags = new List<String>() { "car", "app", "free" }
             };

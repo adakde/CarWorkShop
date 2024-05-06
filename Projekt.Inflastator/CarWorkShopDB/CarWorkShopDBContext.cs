@@ -10,12 +10,16 @@ namespace Projekt.Infrastructure.CarWorkShopDB
 {
     public class CarWorkShopDBContext : DbContext
     {
+        public CarWorkShopDBContext(DbContextOptions<CarWorkShopDBContext> options) : base(options)
+        {
+            
+        }
         public DbSet<CarWorkShop> CarWorkShops { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+/*        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CarWorkShopDb;Trusted_Connection=True;");
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
