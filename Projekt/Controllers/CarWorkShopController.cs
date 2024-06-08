@@ -13,6 +13,12 @@ namespace Projekt.Controllers
         
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Create(Domain.Entities.CarWorkShop carWorkShop)
         {
