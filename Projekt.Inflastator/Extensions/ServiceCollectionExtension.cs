@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Projekt.Domain.Interface;
 using Projekt.Infrastructure.CarWorkShopDB;
+using Projekt.Infrastructure.Repositories;
 using Projekt.Infrastructure.Seeder;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ namespace Projekt.Infrastructure.Entensions
             services.AddDbContext<CarWorkShopDBContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("CarWorkShop")));
             services.AddScoped<CarWorkShopSeeder>();
+            services.AddScoped<ICarWorkShopRepository, CarWorkShopRepository>();
         }
     }
 }

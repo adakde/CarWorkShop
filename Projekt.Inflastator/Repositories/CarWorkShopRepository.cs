@@ -5,20 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projekt;
+using Projekt.Domain.Interface;
+
 namespace Projekt.Infrastructure.Repositories
 {
     internal class CarWorkShopRepository : ICarWorkShopRepository
     {
-        private readonly CarWorkShopDBContext dBContext;
+        private readonly CarWorkShopDBContext _dBContext;
 
         public CarWorkShopRepository(CarWorkShopDBContext dBContext)
         {
-            this.dBContext = dBContext;
+            _dBContext = dBContext;
         }
-        public async Task Create(Domain.Entities.CarWorkShop carWorkShop) 
+
+        public async Task Create(Domain.Entities.CarWorkShop carWorkShop)
         {
-            _dbContext.Add(carWorkShop);
-            await _dbContext.SaveChangesAsync();
+            _dBContext.Add(carWorkShop);
+            await _dBContext.SaveChangesAsync();
         }
     }
 }
